@@ -1,0 +1,60 @@
+font-family:Roboto Slab;
+
+font-size:16px
+
+<span style="color:#77b81e;">text</span>
+
+    letter-spacing: 1.6px;
+
+line-height: 3px;
+
+margin-bottom : 10px;
+
+height: 100px;
+
+color:#77B81E;
+
+
+#ECECEC;
+font-family:Poppins;
+
+
+
+
+<?php
+
+function header_right_smartphone_menu() {
+    register_sidebar( array(
+        'name' => __( 'Header Right Smartphone Menu', 'smallenvelop' ),
+        'id' => 'header-sidebar2',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
+    ) );
+}
+add_action( 'widgets_init', 'header_right_smartphone_menu' );
+
+
+ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header-sidebar2') ) : 
+ 
+endif; ?>
+
+<?php
+
+function header_right_timer_menu() {
+    register_sidebar( array(
+        'name' => __( 'Header Right Timer Menu', 'smallenvelop' ),
+        'id' => 'header-sidebar3',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
+    ) );
+}
+add_action( 'widgets_init', 'header_right_timer_menu' );
+
+
+ if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('header-sidebar3') ) : 
+ 
+endif; ?>
